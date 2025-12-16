@@ -14,10 +14,27 @@
     <div class="navbar-end">
       {% set navPages = collections.all | eleventyNavigation %}
       {%- for entry in navPages %}
-      <a href="{{ entry.url | url }}"
-        class="navbar-item has-text-white{% if entry.url == page.url %} is-active{% endif %}">
-        {{ entry.title }}
-      </a>
+        {%- if entry.children.length %}
+          {# Page with dropdown #}
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link has-text-white">
+              {{ entry.title }}
+            </a>
+            <div class="navbar-dropdown">
+              {%- for child in entry.children %}
+              <a href="{{ child.url | url }}" class="navbar-item{% if child.url == page.url %} is-active{% endif %}">
+                {{ child.title }}
+              </a>
+              {%- endfor %}
+            </div>
+          </div>
+        {%- else %}
+          {# Regular page without dropdown #}
+          <a href="{{ entry.url | url }}"
+            class="navbar-item has-text-white{% if entry.url == page.url %} is-active{% endif %}">
+            {{ entry.title }}
+          </a>
+        {%- endif %}
       {%- endfor %}
     </div>
   </div>

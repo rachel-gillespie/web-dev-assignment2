@@ -1,72 +1,11 @@
-<!DOCTYPE html>
-<html class="has-background-primary-70" lang="en">
+---
+layout: layout.njk
+title: Dashboard
+eleventyNavigation:
+  key: Home
+  order: 1
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>(Whether) Weather</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  <script>
-    //https://bulma.io/documentation/components/navbar/#navbar-menu
-    document.addEventListener('DOMContentLoaded', () => {
-
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener('click', () => {
-
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-
-        });
-      });
-
-    });
-  </script>
-</head>
-
-<body>
-  <section class="hero is-small">
-  <div class="hero-body has-text-centered">
-    <img src="/images/logo.png" alt="logo">
-    <p class="subtitle">
-      The best place to get all your weather updates!
-    </p>
-  </div>
-</section>
-  <nav class="navbar">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img src="/images/logo.png" alt="Logo" />
-    </a>
-    <span class="navbar-burger" data-target="navbarMenu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </span>
-  </div>
-  <div id="navbarMenu" class="navbar-menu">
-    <div class="navbar-end">
-      
-      <a href="/"
-        class="navbar-item has-text-white is-active">
-        Home
-      </a>
-      <a href="/city/"
-        class="navbar-item has-text-white">
-        City
-      </a>
-    </div>
-  </div>
-</nav>
-  
 <body>
   <main class="columns is-multiline box has-background-info-20-invert">
     <div class="column is-12 has-text-centered has-text-link">
@@ -206,18 +145,6 @@
       </section>
     </div>
   </main>
-</body>
-
-</html>
-  <footer class="footer has-background-dark has-text-primary">
-  <div class="container">
-    <div class="content has-text-centered has-text-weight-bold">
-      <p>
-        (Whether) Weather &trade;
-      </p>
-    </div>
-  </div>
-</footer>
 </body>
 
 </html>

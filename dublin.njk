@@ -6,60 +6,186 @@ eleventyNavigation:
   parent: City
   order: 2
 ---
+<!-- https://bulma.io/documentation/elements/notification/ -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      const $notification = $delete.parentNode;
 
-  <main class="columns is-multiline box has-background-info-20-invert is-centered">
-    <div class="column is-12 has-text-centered">
-      <h1 class="title is-spaced has-text-black">Dublin</h1>
-      <h2 class="subtitle">Today</h2>
+      $delete.addEventListener('click', () => {
+        $notification.parentNode.removeChild($notification);
+      });
+    });
+  });
+</script>
+
+<main class="columns is-multiline box has-background-info-20-invert">
+  <div class="column is-12 has-text-centered">
+    <h1 class="title is-spaced has-text-black is-family-primary">Dublin</h1>
+    <h2 class="subtitle is-family-secondary">Today</h2>
+  </div>
+  <div class="notification is-link">
+    <button class="delete"></button>
+    <h3 class="title is-4 is-spaced">Right Now </h3>
+    <p class="subtitle is-3">
+      6°C
+    </p>
+    <p class="subtitle is-3">
+      15km/h
+    </p>
+  </div>
+  <div class="box column is-3">
+    <figure class="image block">
+      <img src="/images/rain.jpg" alt="Rain">
+    </figure>
+    <h3 class="title is-4">Max Temperature</h3>
+    <p class="subtitle is-3">
+      11°C
+    </p>
+    <h3 class="title is-4">Max Wind</h3>
+    <p class="subtitle is-3">
+      42 km/h
+    </p>
+  </div>
+
+  <div class="column is-3 has-text-centered">
+    <h1 class="title is-4 is-spaced has-text-black is-family-primary">Looking at the week ahead</h1>
+  </div>
+
+  <div class="card column is-2">
+    <header class="card-header">
+      <p class="card-header-title">Monday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+      </figure>
     </div>
-    <div class="column is-4">
-      <section class="card has-text-centered">
+    <div class="card-content">
+      <div class="content">
+        <p class="subtitle is-3">
+          11°C
+        </p>
+        <p class="subtitle is-3">
+          42 km/h
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">Tuesday</p>
+      </header>
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          <p class="subtitle is-3">
+            11°C
+          </p>
+          <p class="subtitle is-3">
+            42 km/h
+          </p>
+        </div>
+      </div>
+      <div class="card">
         <header class="card-header">
-          <p class="card-header-title is-size-4 is-centered is-1280x1280">City 1</p>
+          <p class="card-header-title">Wednesday</p>
         </header>
         <div class="card-image">
-          <figure class="image">
-            <img src="/images/rain-with-lightning-and-clouds.jpg" alt="Rain with lightning and clouds">
+          <figure class="image is-4by3">
+            <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
           </figure>
         </div>
-        <article class="card-content">
-          <p class="content is-size-4">
-            12°C
-          </p>
-        </article>
-        <footer class="card-footer">
-          <a href="/city" class="card-footer-item">View</a>
-          <a href="#" class="card-footer-item">Add to Favourites</a>
-          <a href="#" class="card-footer-item">Remove</a>
-        </footer>
-      </section>
-    </div>
-    <div class="column is-8">
-      <table class="table is-fullwidth">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Duration</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>The Grudge</td>
-            <td>Tool</td>
-            <td>8:35</td>
-          </tr>
-          <tr>
-            <td>The Grudge</td>
-            <td>Tool</td>
-            <td>8:35</td>
-          </tr>
-          <tr>
-            <td>The Grudge</td>
-            <td>Tool</td>
-            <td>8:35</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
+        <div class="card-content">
+          <div class="content">
+            <p class="subtitle is-3">
+              11°C
+            </p>
+            <p class="subtitle is-3">
+              42 km/h
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Thursday</p>
+          </header>
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle is-3">
+                11°C
+              </p>
+              <p class="subtitle is-3">
+                42 km/h
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">Friday</p>
+            </header>
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <p class="subtitle is-3">
+                  11°C
+                </p>
+                <p class="subtitle is-3">
+                  42 km/h
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Saturday</p>
+              </header>
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <p class="subtitle is-3">
+                    11°C
+                  </p>
+                  <p class="subtitle is-3">
+                    42 km/h
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">Sunday</p>
+                </header>
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="subtitle is-3">
+                      11°C
+                    </p>
+                    <p class="subtitle is-3">
+                      42 km/h
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</main>

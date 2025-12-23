@@ -6,150 +6,59 @@ eleventyNavigation:
   order: 1
 ---
 
-  <main class="columns is-multiline box has-background-info-20-invert">
-    <div class="column is-12 has-text-centered has-text-link">
-      <h1 class="title is-spaced has-text-black">Dashboard</h1>
-      <h2 class="subtitle">Today</h2>
-    </div>
-    <div class="column is-4">
-      <section class="card has-text-centered">
-        <header class="card-header">
-          <p class="card-header-title is-size-4 is-centered">Dublin</p>
-        </header>
-        <div class="card-image">
-          <figure class="image has-background-white is-3by3">
-            <img src="/images/dublin.jpg" alt="Dublin">
-          </figure>
-        </div>
-        <article class="card-content">
-          <p class="content is-size-4">
-            <span class="icon">
-              <i class="fa-regular fa-sun"></i>
-            </span>
-            Sunshine and a few clouds. Hi: 8°C
-          </p>
-          <p class="content is-size-4">
-            <span class="icon">
-              <i class="fa-solid fa-wind"></i>            
-            </span>
-            Wind gusts: 23km/h
-          </p>
-        </article>
-        <footer class="card-footer">
-          <a href="/dublin" class="card-footer-item">View</a>
-          <a href="#" class="card-footer-item">Add to Favourites</a>
-          <a href="#" class="card-footer-item">Remove</a>
-        </footer>
-      </section>
-    </div>
-    <div class="column is-4">
-      <section class="card has-text-centered">
-        <header class="card-header">
-          <p class="card-header-title is-size-4 is-centered">London</p>
-        </header>
-        <div class="card-image">
-          <figure class="image">
-            <img src="/images/london.jpg" alt="London">
-          </figure>
-        </div>
-        <article class="card-content">
-          <p class="content is-size-4">
-            12°C
-          </p>
-        </article>
-        <footer class="card-footer">
-          <a href="/london" class="card-footer-item">View</a>
-          <a href="#" class="card-footer-item">Add to Favourites</a>
-          <a href="#" class="card-footer-item">Remove</a>
-        </footer>
-      </section>
-    </div>
-    <div class="column is-4">
-      <section class="card has-text-centered">
-        <header class="card-header">
-          <p class="card-header-title is-size-4 is-centered">Paris</p>
-        </header>
-        <div class="card-image">
-          <figure class="image">
-            <img src="/images/paris.jpg" alt="Paris">
-          </figure>
-        </div>
-        <article class="card-content">
-          <p class="content is-size-4">
-            12°C
-          </p>
-        </article>
-        <footer class="card-footer">
-          <a href="/paris" class="card-footer-item">View</a>
-          <a href="#" class="card-footer-item">Add to Favourites</a>
-          <a href="#" class="card-footer-item">Remove</a>
-        </footer>
-      </section>
-    </div>
-    <div class="column is-4">
-      <section class="card has-text-centered">
-        <header class="card-header">
-          <p class="card-header-title is-size-4 is-centered">Rome</p>
-        </header>
-        <div class="card-image">
-          <figure class="image">
-            <img src="/images/rome.jpg" alt="Rome">
-          </figure>
-        </div>
-        <article class="card-content">
-          <p class="content is-size-4">
-            12°C
-          </p>
-        </article>
-        <footer class="card-footer">
-          <a href="/rome" class="card-footer-item">View</a>
-          <a href="#" class="card-footer-item">Add to Favourites</a>
-          <a href="#" class="card-footer-item">Remove</a>
-        </footer>
-      </section>
-    </div>
-    <div class="column is-4">
-      <section class="card has-text-centered">
-        <header class="card-header">
-          <p class="card-header-title is-size-4 is-centered">Tokyo</p>
-        </header>
-        <div class="card-image">
-          <figure class="image">
-            <img src="/images/tokyo.jpg" alt="Tokyo">
-          </figure>
-        </div>
-        <article class="card-content">
-          <p class="content is-size-4">
-            12°C
-          </p>
-        </article>
-        <footer class="card-footer">
-          <a href="/tokyo" class="card-footer-item">View</a>
-          <a href="#" class="card-footer-item">Add to Favourites</a>
-          <a href="#" class="card-footer-item">Remove</a>
-        </footer>
-      </section>
-    </div>
-    <div class="column is-4">
-      <section class="card has-text-centered">
-        <header class="card-header">
-          <p class="card-header-title is-size-4 is-centered">New York</p>
-        </header>
-        <div class="card-image">
-          <figure class="image">
-            <img src="/images/new york.jpg" alt="New York">
-          </figure>
-        </div>
-        <article class="card-content">
-          <p class="content is-size-4">
-            12°C
-          </p>
-        </article>
-        <footer class="card-footer">
-          <a href="/new-york" class="card-footer-item">View</a>
-          <a href="#" class="card-footer-item">Add to Favourites</a>
-          <a href="#" class="card-footer-item">Remove</a>
-        </footer>
-      </section>
-    </div>
-  </main>
+<main class="columns is-multiline box has-background-info-20 is-centered">
+
+  <div class="column is-12 has-text-centered has-text-white">
+    <h1 class="title is-2">Dashboard</h1>
+    <h2 class="subtitle">Today</h2>
+  </div>
+
+  {% set cityTitle = "Dublin" %}
+  {% set cityImage = "/images/dublin.jpg" %}
+  {% set cityDescription = "Cloudy with Rain/Drizzle" %}
+  {% set cityWeather = "Max Temp (°C): 11°C, Max Wind Strength (km/h): 26km/h" %}
+  {% set cityPath = "/dublin"%}
+
+  {% include "city-card-component.njk" %}
+
+  {% set cityTitle = "London" %}
+  {% set cityImage = "/images/london.jpg" %}
+  {% set cityDescription = "Cloudy with Sunny Intervals" %}
+  {% set cityWeather = "Max Temp (°C): 13°C, Max Wind Strength (km/h): 21km/h" %}
+  {% set cityPath = "/london"%}
+
+  {% include "city-card-component.njk" %}
+
+  {% set cityTitle = "Paris" %}
+  {% set cityImage = "/images/paris.jpg" %}
+  {% set cityDescription = "Cloudy" %}
+  {% set cityWeather = "Max Temp (°C): 13°C, Max Wind Strength (km/h): 21km/h" %}
+  {% set cityPath = "/paris"%}
+
+  {% include "city-card-component.njk" %}
+
+  {% set cityTitle = "Rome" %}
+  {% set cityImage = "/images/rome.jpg" %}
+  {% set cityDescription = "Cloudy with Sunny Intervals" %}
+  {% set cityWeather = "Max Temp (°C): 16°C, Max Wind Strength (km/h): 21km/h" %}
+  {% set cityPath = "/rome"%}
+
+  {% include "city-card-component.njk" %}
+
+  {% set cityTitle = "Tokyo" %}
+  {% set cityImage = "/images/tokyo.jpg" %}
+  {% set cityDescription = "Clear / Sunny" %}
+  {% set cityWeather = "Max Temp (°C): 18°C, Max Wind Strength (km/h): 28km/h" %}
+  {% set cityPath = "/tokyo"%}
+
+  {% include "city-card-component.njk" %}
+
+  {% set cityTitle = "New York" %}
+  {% set cityImage = "/images/new-york.jpg" %}
+  {% set cityDescription = "Sunny" %}
+  {% set cityWeather = "Max Temp (°C): 4°C, Max Wind Strength (km/h): 19km/h" %}
+  {% set cityPath = "/new-york"%}
+
+  {% include "city-card-component.njk" %}
+
+</main>

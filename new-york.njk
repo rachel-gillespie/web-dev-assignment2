@@ -1,192 +1,172 @@
 ---
 layout: layout.njk
 title: New York
+cityTitle: New York
+cityImage: /images/new-york.jpg
+cityDescription: Sunny
+cityWeather: Max Temp (°C) 4°C, Max Wind Strength (km/h) 19km/h
+cityPath: /new-york
 eleventyNavigation:
   key: New York
   parent: City
   order: 2
 ---
 
-<!-- https://bulma.io/documentation/elements/notification/ -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-      const $notification = $delete.parentNode;
+<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="/index">Home</a></li>
+    <li class="is-active"><a href="#" aria-current="page">New York</a></li>
+  </ul>
+</nav>
 
-      $delete.addEventListener('click', () => {
-        $notification.parentNode.removeChild($notification);
-      });
-    });
-  });
-</script>
+<main class="columns is-multiline box has-background-info-20">
 
-<main class="columns is-multiline box has-background-info-20-invert">
-  <div class="column is-12 has-text-centered">
-    <h1 class="title is-spaced has-text-black is-family-primary">New York</h1>
-    <h2 class="subtitle is-family-secondary">Today</h2>
-  </div>
-  <div class="notification is-link">
-    <button class="delete"></button>
-    <h3 class="title is-4 is-spaced">Right Now </h3>
-    <p class="subtitle is-3">
-      6°C
-    </p>
-    <p class="subtitle is-3">
-      15km/h
-    </p>
-  </div>
-  <div class="box column is-3">
-    <figure class="image block">
-      <img src="/images/rain.jpg" alt="Rain">
-    </figure>
-    <h3 class="title is-4">Max Temperature</h3>
-    <p class="subtitle is-3">
-      11°C
-    </p>
-    <h3 class="title is-4">Max Wind</h3>
-    <p class="subtitle is-3">
-      42 km/h
-    </p>
-  </div>
+  <div class="column">
 
-  <div class="column is-3 has-text-centered">
-    <h1 class="title is-4 is-spaced has-text-black is-family-primary">Looking at the week ahead</h1>
-  </div>
+    {% include "city-card-component.njk" %}
 
-  <div class="card column is-2">
-    <header class="card-header">
-      <p class="card-header-title">Monday</p>
-    </header>
-    <div class="card-image">
-      <figure class="image is-4by3">
-        <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+    <section class="section">
+      <h2 class="title is-4">Right Now</h2>
+      <figure class="image is-128x128">
+        <img src="/images/rain.jpg" alt="Rain">
       </figure>
-    </div>
-    <div class="card-content">
-      <div class="content">
-        <p class="subtitle is-3">
-          11°C
-        </p>
-        <p class="subtitle is-3">
-          42 km/h
-        </p>
-      </div>
-    </div>
-    <div class="card">
+      <h3 class="title is-5">Max Temp (°C)</h3>
+      <p class="subtitle is-3">11°C </p>
+      <h3 class="title is-5">Max Wind Strength (km/h)</h3>
+      <p class="subtitle is-3">26km/h </p>
+    </section>
+
+  </div>
+
+  <div class="columns is-4 is-centered is-multiline">
+    <section class="column is-2 card">
       <header class="card-header">
-        <p class="card-header-title">Tuesday</p>
+        <p class="card-header-title is-size-4">Monday</p>
       </header>
       <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
+        <figure class="image">
+          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
         </figure>
       </div>
-      <div class="card-content">
-        <div class="content">
-          <p class="subtitle is-3">
-            11°C
-          </p>
-          <p class="subtitle is-3">
-            42 km/h
-          </p>
-        </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          Cloudy
+        </p>
+        <p class="content is-size-4">
+          Max Temp (°C): 8°C <br> Max Wind Strength (km/h): 25km/h
+        </p>
+      </article>
+    </section>
+    <section class="column is-2 card">
+      <header class="card-header">
+        <p class="card-header-title is-size-4">Tuesday</p>
+      </header>
+      <div class="card-image">
+        <figure class="image">
+          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
+        </figure>
       </div>
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">Wednesday</p>
-        </header>
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <p class="subtitle is-3">
-              11°C
-            </p>
-            <p class="subtitle is-3">
-              42 km/h
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title">Thursday</p>
-          </header>
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle is-3">
-                11°C
-              </p>
-              <p class="subtitle is-3">
-                42 km/h
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title">Friday</p>
-            </header>
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                <p class="subtitle is-3">
-                  11°C
-                </p>
-                <p class="subtitle is-3">
-                  42 km/h
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">Saturday</p>
-              </header>
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <p class="subtitle is-3">
-                    11°C
-                  </p>
-                  <p class="subtitle is-3">
-                    42 km/h
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <header class="card-header">
-                  <p class="card-header-title">Sunday</p>
-                </header>
-                <div class="card-image">
-                  <figure class="image is-4by3">
-                    <img src="/images/clouds-with-sun.jpg" alt="Placeholder image" />
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="content">
-                    <p class="subtitle is-3">
-                      11°C
-                    </p>
-                    <p class="subtitle is-3">
-                      42 km/h
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          Cloudy
+        </p>
+        <p class="content is-size-4">
+          Max Temp (°C): 11°C <br> Max Wind Strength (km/h): 27km/h
+        </p>
+      </article>
+    </section>
+    <section class="column is-2 card">
+      <header class="card-header">
+        <p class="card-header-title is-size-4">Wednesday</p>
+      </header>
+      <div class="card-image">
+        <figure class="image">
+          <img src="/images/sunny-intervals.jpg" alt="Sunny Sky">
+        </figure>
+      </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          Sunny Intervals
+        </p>
+        <p class="content is-size-4">
+          Max Temp (°C): 9°C <br> Max Wind Strength (km/h): 39km/h
+        </p>
+      </article>
+    </section>
+    <section class="column is-2 card">
+      <header class="card-header">
+        <p class="card-header-title is-size-4">Thursday</p>
+      </header>
+      <div class="card-image">
+        <figure class="image">
+          <img src="/images/sunny-intervals.jpg" alt="Sunny Sky">
+        </figure>
+      </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          Fair/Sunny Intervals
+        </p>
+        <p class="content is-size-4">
+          Max Temp (°C): 8°C <br> Max Wind Strength (km/h): 42km/h
+        </p>
+      </article>
+    </section>
+    <section class="column is-2 card">
+      <header class="card-header">
+        <p class="card-header-title is-size-4">Friday</p>
+      </header>
+      <div class="card-image">
+        <figure class="image">
+          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
+        </figure>
+      </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          Partly Cloudy
+        </p>
+        <p class="content is-size-4">
+          Max Temp (°C): 9°C <br> Max Wind Strength (km/h): 42km/h
+        </p>
+      </article>
+    </section>
+    <section class="column is-2 card">
+      <header class="card-header">
+        <p class="card-header-title is-size-4">Saturday</p>
+      </header>
+      <div class="card-image">
+        <figure class="image">
+          <img src="/images/sunny-intervals.jpg" alt="Sunny Sky">
+        </figure>
+      </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          Sunny Intervals
+        </p>
+        <p class="content is-size-4">
+          Max Temp (°C): 9°C <br> Max Wind Strength (km/h): 42km/h
+        </p>
+      </article>
+    </section>
+    <section class="column is-2 card">
+      <header class="card-header">
+        <p class="card-header-title is-size-4">Sunday</p>
+      </header>
+      <div class="card-image">
+        <figure class="image">
+          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
+        </figure>
+      </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          Cloudy
+        </p>
+        <p class="content is-size-4">
+          Max Temp (°C): 8°C <br> Max Wind Strength (km/h): 27km/h
+        </p>
+      </article>
+    </section>
+
+
+  </div>
+
 </main>

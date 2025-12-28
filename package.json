@@ -2,23 +2,25 @@
   "name": "web-dev-assignment2",
   "version": "1.0.0",
   "description": "An API that provides weather data for cities all over the world using the latest satellite technology.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./node_modules/.bin/eleventy"
+  "keywords": [],
+  "homepage": "https://github.com/rachel-gillespie/web-dev-assignment2#readme",
+  "bugs": {
+    "url": "https://github.com/rachel-gillespie/web-dev-assignment2/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rachel-gillespie/web-dev-assignment2.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/rachel-gillespie/web-dev-assignment2/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/rachel-gillespie/web-dev-assignment2#readme",
+  "dependencies": {
+    "dependency-graph": "^1.0.0"
+  },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^1.0.5"
   }

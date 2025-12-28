@@ -5,20 +5,14 @@ eleventyNavigation:
   key: Health and Activities
   order: 4
 ---
-<!-- https://bulma.io/documentation/components/breadcrumb/ -->
-<div class="column is-12 has-text-centered">
-  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-    <ul>
-      <li><a href="/index">Home</a></li>
-      <li class="is-active"><a href="#" aria-current="page">Health and Activities</a></li>
-    </ul>
-  </nav>
-  </div>
 
-  <div class="column is-12 has-text-centered has-text-white">
-    <h1 class="title is-2">Health and Activities</h1>
-  </div>
+{% include "breadcrumb-component.njk" %}
 
+<div class="column is-12 has-text-centered has-text-white">
+  <h1 class="title">Health and Activities</h1>
+</div>
+
+<!-- https://bulma.io/documentation/form/select/ -->
 <div class="field column is-12">
   <p class="control has-icons-left">
     <span class="select">
@@ -39,7 +33,7 @@ eleventyNavigation:
 </div>
 
 <section class="content column">
-  <h1 class="title is-4">Allergies</h1>
+  <h2 class="title is-4">Allergies</h2>
   <div class="card">
     <div class="card-content">
       <div class="content">
@@ -53,7 +47,7 @@ eleventyNavigation:
   </div>
 </section>
 <section class="content column">
-  <h1 class="title is-4">Health</h1>
+  <h2 class="title is-4">Health</h2>
   <div class="card">
     <div class="card-content">
       <div class="content">
@@ -67,8 +61,8 @@ eleventyNavigation:
     </div>
   </div>
 </section>
-  <section class="content column">
-  <h1 class="title is-4">Outdoor Activities</h1>
+<section class="content column">
+  <h2 class="title is-4">Outdoor Activities</h2>
   <div class="card">
     <div class="card-content">
       <div class="content">
@@ -82,8 +76,8 @@ eleventyNavigation:
     </div>
   </div>
 </section>
-  <section class="content column">
-  <h1 class="title is-4">Travel & Commute</h1>
+<section class="content column">
+  <h2 class="title is-4">Travel & Commute</h2>
   <div class="card">
     <div class="card-content">
       <div class="content">
@@ -93,8 +87,8 @@ eleventyNavigation:
     </div>
   </div>
 </section>
-  <section class="content column">
-  <h1 class="title is-4">Home & Garden</h1>
+<section class="content column">
+  <h2 class="title is-4">Home & Garden</h2>
   <div class="card">
     <div class="card-content">
       <div class="content">
@@ -105,8 +99,8 @@ eleventyNavigation:
     </div>
   </div>
 </section>
-  <section class="content column">
-  <h1 class="title is-4">Pests</h1>
+<section class="content column">
+  <h2 class="title is-4">Pests</h2>
   <div class="card">
     <div class="card-content">
       <div class="content">
@@ -117,4 +111,3 @@ eleventyNavigation:
     </div>
   </div>
 </section>
-

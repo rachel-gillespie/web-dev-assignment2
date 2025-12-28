@@ -1,4 +1,5 @@
 <!-- https://bulma.io/documentation/components/navbar/ -->
+<!-- https://www.11ty.dev/docs/plugins/navigation/ -->
 <nav class="navbar has-background-info-80">
   <div class="navbar-brand">
     <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
@@ -10,41 +11,44 @@
   </div>
   <div id="navbarMenu" class="navbar-menu">
     <div class="navbar-start has-background-info-80">
+      <!-- This line fetches all pages that have navigation metadata defined in their front matter and organizes them into a hierarchical structure: -->
       {% set navPages = collections.all | eleventyNavigation %}
+      <!-- The code loops through each top-level navigation entry: -->
       {%- for entry in navPages %}
-        {%- if entry.children.length %}
-          {# Page with dropdown #}
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link has-text-white">
-              {{ entry.title }}
-            </a>
-            <div class="navbar-dropdown">
-              {%- for child in entry.children %}
-              <a href="{{ child.url | url }}" class="navbar-item{% if child.url == page.url %} is-active{% endif %}">
-                {{ child.title }}
-              </a>
-              {%- endfor %}
-            </div>
-          </div>
-        {%- else %}
-          {# Regular page without dropdown #}
-          <a href="{{ entry.url | url }}"
-            class="navbar-item has-text-white{% if entry.url == page.url %} is-active{% endif %}">
-            {{ entry.title }}
+      <!-- For each entry, it checks if there are child pages: -->
+      {%- if entry.children.length %}
+      {# Page with dropdown #}
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link has-text-white">
+          {{ entry.title }}
+        </a>
+        <div class="navbar-dropdown">
+          {%- for child in entry.children %}
+          <a href="{{ child.url | url }}" class="navbar-item{% if child.url == page.url %} is-active{% endif %}">
+            {{ child.title }}
           </a>
-        {%- endif %}
+          {%- endfor %}
+        </div>
+      </div>
+      {%- else %}
+      {# Regular page without dropdown #}
+      <a href="{{ entry.url | url }}"
+        class="navbar-item has-text-white{% if entry.url == page.url %} is-active{% endif %}">
+        {{ entry.title }}
+      </a>
+      {%- endif %}
       {%- endfor %}
     </div>
     <div class="navbar-end">
       <div class="navbar-item">
-          <button class="js-modal-trigger button is-link" data-target="user-modal">
-            <strong>Sign up</strong>
-          </button>
-          <button class="js-modal-trigger button is-light" data-target="user-modal">
-            Log in
-          </button>
-          {% include "user-component.njk" %}
-        </div>
+        <button class="js-modal-trigger button is-link" data-target="user-modal">
+          <strong>Sign up</strong>
+        </button>
+        <button class="js-modal-trigger button is-light" data-target="user-modal">
+          Log in
+        </button>
+        {% include "user-component.njk" %}
       </div>
     </div>
+  </div>
 </nav>

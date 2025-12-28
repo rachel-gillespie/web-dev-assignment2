@@ -60,13 +60,13 @@
       });
 
       // Add a click event on various child elements to close the parent modal
-      (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-        const $target = $close.closest('.modal');
+      // (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+      //   const $target = $close.closest('.modal');
 
-        $close.addEventListener('click', () => {
-          closeModal($target);
-        });
-      });
+      //   $close.addEventListener('click', () => {
+      //     closeModal($target);
+      //   });
+      // });
 
       // Add a keyboard event to close all modals
       document.addEventListener('keydown', (event) => {
@@ -89,6 +89,7 @@
   </div>
 </section>
   <!-- https://bulma.io/documentation/components/navbar/ -->
+<!-- https://www.11ty.dev/docs/plugins/navigation/ -->
 <nav class="navbar has-background-info-80">
   <div class="navbar-brand">
     <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
@@ -100,65 +101,72 @@
   </div>
   <div id="navbarMenu" class="navbar-menu">
     <div class="navbar-start has-background-info-80">
+      <!-- This line fetches all pages that have navigation metadata defined in their front matter and organizes them into a hierarchical structure: -->
       
-          
-          <a href="/"
-            class="navbar-item has-text-white">
-            Home
+      <!-- The code loops through each top-level navigation entry: -->
+      <!-- For each entry, it checks if there are child pages: -->
+      
+      <a href="/"
+        class="navbar-item has-text-white">
+        Home
+      </a>
+      <!-- For each entry, it checks if there are child pages: -->
+      
+      <a href="/about/"
+        class="navbar-item has-text-white">
+        About
+      </a>
+      <!-- For each entry, it checks if there are child pages: -->
+      
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link has-text-white">
+          City
+        </a>
+        <div class="navbar-dropdown">
+          <a href="/dublin/" class="navbar-item">
+            Dublin
           </a>
-          
-          <a href="/about/"
-            class="navbar-item has-text-white">
-            About
+          <a href="/london/" class="navbar-item">
+            London
           </a>
-          
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link has-text-white">
-              City
-            </a>
-            <div class="navbar-dropdown">
-              <a href="/dublin/" class="navbar-item">
-                Dublin
-              </a>
-              <a href="/london/" class="navbar-item">
-                London
-              </a>
-              <a href="/new-york/" class="navbar-item">
-                New York
-              </a>
-              <a href="/paris/" class="navbar-item">
-                Paris
-              </a>
-              <a href="/rome/" class="navbar-item">
-                Rome
-              </a>
-              <a href="/tokyo/" class="navbar-item is-active">
-                Tokyo
-              </a>
-            </div>
-          </div>
-          
-          <a href="/health-activities/"
-            class="navbar-item has-text-white">
-            Health and Activities
+          <a href="/new-york/" class="navbar-item">
+            New York
           </a>
-          
-          <a href="/settings/"
-            class="navbar-item has-text-white">
-            Settings
+          <a href="/paris/" class="navbar-item">
+            Paris
           </a>
+          <a href="/rome/" class="navbar-item">
+            Rome
+          </a>
+          <a href="/tokyo/" class="navbar-item is-active">
+            Tokyo
+          </a>
+        </div>
+      </div>
+      <!-- For each entry, it checks if there are child pages: -->
+      
+      <a href="/health-activities/"
+        class="navbar-item has-text-white">
+        Health and Activities
+      </a>
+      <!-- For each entry, it checks if there are child pages: -->
+      
+      <a href="/settings/"
+        class="navbar-item has-text-white">
+        Settings
+      </a>
     </div>
     <div class="navbar-end">
       <div class="navbar-item">
-          <button class="js-modal-trigger button is-link" data-target="user-modal">
-            <strong>Sign up</strong>
-          </button>
-          <button class="js-modal-trigger button is-light" data-target="user-modal">
-            Log in
-          </button>
-          <!-- https://bulma.io/documentation/components/modal/ -->
+        <button class="js-modal-trigger button is-link" data-target="user-modal">
+          <strong>Sign up</strong>
+        </button>
+        <button class="js-modal-trigger button is-light" data-target="user-modal">
+          Log in
+        </button>
+        <!-- https://bulma.io/documentation/components/modal/ -->
 <div id="user-modal" class="modal has-text-centered">
-    <div class="modal-background">
+  <div class="modal-background">
     <div class="modal-content">
       <div class="box">
         <div class="field">
@@ -189,38 +197,42 @@
         </div>
       </div>
     </div>
-    </div>
-    <button class="modal-close is-large" aria-label="close"></button>
   </div>
-        </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
       </div>
     </div>
+  </div>
 </nav>
+  <!-- <div class="column is-12 has-text-centered has-text-white">
+    <h1 class="title is-2">Tokyo</h1>
+  </div> -->
   <main class="columns is-multiline box has-background-success is-centered">
-    <!-- https://bulma.io/documentation/components/breadcrumb/ -->
+    
+<!-- https://bulma.io/documentation/components/breadcrumb/ -->
 <div class="column is-12 has-text-centered">
-<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="/index">Home</a></li>
-    <li class="is-active"><a href="#" aria-current="page">Tokyo</a></li>
-  </ul>
-</nav>
+  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="/index">Home</a></li>
+      <li class="is-active"><a href="#" aria-current="page">Tokyo</a></li>
+    </ul>
+  </nav>
 </div>
 
 <div class="column is-12">
-  <p class="title is-4">Today</p>
+  <h1 class="title">Today</h1>
   <button class="js-modal-trigger button" data-target="weather-modal">
     Right Now
   </button>
 </div>
 
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/modal/ -->
+
+
+
+<!-- https://bulma.io/documentation/components/modal/ -->
 <div id="weather-modal" class="modal has-text-centered">
-    <div class="modal-background">
+  <div class="modal-background">
     <div class="modal-content">
       <div class="box">
         <p class="title is-4">Right Now</p>
@@ -233,15 +245,15 @@
         <p class="subtitle is-3">16km/h</p>
       </div>
     </div>
-    </div>
-    <button class="modal-close is-large" aria-label="close"></button>
   </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
 
-  <div class="column is-12 has-text-centered has-text-white">
-    <p class="title is-4">The Week Ahead</p>
-    </div>
+<div class="column is-12 has-text-centered has-text-white">
+  <h2 class="title is-4">The Week Ahead</h2>
+</div>
 
-    <!-- https://bulma.io/documentation/components/card/ -->
+<!-- https://bulma.io/documentation/components/card/ -->
 <div class="column is-2">
   <section class="card has-text-centered">
     <header class="card-header">
@@ -271,202 +283,203 @@
   </section>
 </div>
 
-  
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column">
-    <section class="card has-background-light has-text-dark">
-      <header class="card-header">
-        <p class="card-header-title is-size-4 has-text-dark">Monday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/sun.svg" alt="Weather Image">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Abundant sunshine
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 12°C, Max Wind Strength (km/h): 13km/h
-        </p>
-      </article>
-    </section>
-  </div>
 
-  
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column">
-    <section class="card has-background-light has-text-dark">
-      <header class="card-header">
-        <p class="card-header-title is-size-4 has-text-dark">Tuesday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/partly-sunny.svg" alt="Weather Image">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Intervals of clouds and sunshine
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 14°C, Max Wind Strength (km/h): 7km/h
-        </p>
-      </article>
-    </section>
-  </div>
 
-  
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column">
-    <section class="card has-background-light has-text-dark">
-      <header class="card-header">
-        <p class="card-header-title is-size-4 has-text-dark">Wednesday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/partly-sunny.svg" alt="Weather Image">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Sun and some clouds
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 12°C, Max Wind Strength (km/h): 15km/h
-        </p>
-      </article>
-    </section>
-  </div>
+<!-- https://bulma.io/documentation/components/card/ -->
+<div class="column">
+  <section class="card has-background-light has-text-dark">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 has-text-dark">Monday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/sun.svg" alt="Weather Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Abundant sunshine
+      </p>
+      <p class="content is-size-4">
+        Max Temp (°C): 12°C, Max Wind Strength (km/h): 13km/h
+      </p>
+    </article>
+  </section>
+</div>
 
-  
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column">
-    <section class="card has-background-light has-text-dark">
-      <header class="card-header">
-        <p class="card-header-title is-size-4 has-text-dark">Thursday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/cloud.svg" alt="Weather Image">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Mainly cloudy and cooler
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 9°C, Max Wind Strength (km/h): 20km/h
-        </p>
-      </article>
-    </section>
-  </div>
 
-  
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column">
-    <section class="card has-background-light has-text-dark">
-      <header class="card-header">
-        <p class="card-header-title is-size-4 has-text-dark">Friday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/cloud.svg" alt="Weather Image">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Considerable cloudiness
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 9°C, Max Wind Strength (km/h): 11km/h
-        </p>
-      </article>
-    </section>
-  </div>
 
-  
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column">
-    <section class="card has-background-light has-text-dark">
-      <header class="card-header">
-        <p class="card-header-title is-size-4 has-text-dark">Saturday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/partly-sunny.svg" alt="Weather Image">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Partly sunny
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 8°C, Max Wind Strength (km/h): 4km/h
-        </p>
-      </article>
-    </section>
-  </div>
+<!-- https://bulma.io/documentation/components/card/ -->
+<div class="column">
+  <section class="card has-background-light has-text-dark">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 has-text-dark">Tuesday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/partly-sunny.svg" alt="Weather Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Intervals of clouds and sunshine
+      </p>
+      <p class="content is-size-4">
+        Max Temp (°C): 14°C, Max Wind Strength (km/h): 7km/h
+      </p>
+    </article>
+  </section>
+</div>
 
-  
-  
-  
-  
 
-  <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column">
-    <section class="card has-background-light has-text-dark">
-      <header class="card-header">
-        <p class="card-header-title is-size-4 has-text-dark">Sunday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/cloud-sun-rain.svg" alt="Weather Image">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Sunny to partly cloudy with a shower in places in the afternoon
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 7°C, Max Wind Strength (km/h): 9km/h
-        </p>
-      </article>
-    </section>
-  </div>
+
+
+
+
+<!-- https://bulma.io/documentation/components/card/ -->
+<div class="column">
+  <section class="card has-background-light has-text-dark">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 has-text-dark">Wednesday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/partly-sunny.svg" alt="Weather Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Sun and some clouds
+      </p>
+      <p class="content is-size-4">
+        Max Temp (°C): 12°C, Max Wind Strength (km/h): 15km/h
+      </p>
+    </article>
+  </section>
+</div>
+
+
+
+
+
+
+<!-- https://bulma.io/documentation/components/card/ -->
+<div class="column">
+  <section class="card has-background-light has-text-dark">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 has-text-dark">Thursday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/cloud.svg" alt="Weather Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Mainly cloudy and cooler
+      </p>
+      <p class="content is-size-4">
+        Max Temp (°C): 9°C, Max Wind Strength (km/h): 20km/h
+      </p>
+    </article>
+  </section>
+</div>
+
+
+
+
+
+
+<!-- https://bulma.io/documentation/components/card/ -->
+<div class="column">
+  <section class="card has-background-light has-text-dark">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 has-text-dark">Friday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/cloud.svg" alt="Weather Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Considerable cloudiness
+      </p>
+      <p class="content is-size-4">
+        Max Temp (°C): 9°C, Max Wind Strength (km/h): 11km/h
+      </p>
+    </article>
+  </section>
+</div>
+
+
+
+
+
+
+<!-- https://bulma.io/documentation/components/card/ -->
+<div class="column">
+  <section class="card has-background-light has-text-dark">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 has-text-dark">Saturday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/partly-sunny.svg" alt="Weather Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Partly sunny
+      </p>
+      <p class="content is-size-4">
+        Max Temp (°C): 8°C, Max Wind Strength (km/h): 4km/h
+      </p>
+    </article>
+  </section>
+</div>
+
+
+
+
+
+
+<!-- https://bulma.io/documentation/components/card/ -->
+<div class="column">
+  <section class="card has-background-light has-text-dark">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 has-text-dark">Sunday</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/cloud-sun-rain.svg" alt="Weather Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Sunny to partly cloudy with a shower in places in the afternoon
+      </p>
+      <p class="content is-size-4">
+        Max Temp (°C): 7°C, Max Wind Strength (km/h): 9km/h
+      </p>
+    </article>
+  </section>
+</div>
   </main>
   <!-- https://bulma.io/documentation/layout/footer/ -->
 <footer class="footer has-background-info-50">
-    <div class="content has-text-centered has-text-weight-bold has-text-warning">
-      <p>
-        (Whether) Weather &trade;
-      </p>
-    </div>
+  <div class="content has-text-centered has-text-weight-bold has-text-warning">
+    <p>
+      (Whether) Weather &trade;
+    </p>
+  </div>
 </footer>
 </body>
+
 </html>

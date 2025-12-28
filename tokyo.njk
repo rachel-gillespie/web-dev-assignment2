@@ -12,80 +12,73 @@ eleventyNavigation:
   parent: City
   order: 2
 ---
-<!-- https://bulma.io/documentation/components/breadcrumb/ -->
-<div class="column is-12 has-text-centered">
-<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="/index">Home</a></li>
-    <li class="is-active"><a href="#" aria-current="page">Tokyo</a></li>
-  </ul>
-</nav>
-</div>
+
+{% include "breadcrumb-component.njk" %}
 
 <div class="column is-12">
-  <p class="title is-4">Today</p>
+  <h1 class="title">Today</h1>
   <button class="js-modal-trigger button" data-target="weather-modal">
     Right Now
   </button>
 </div>
 
-  {% set weatherNowImage = "/images/partly-sunny.svg" %}
-  {% set tempNow = "-1°C" %}
-  {% set windStrengthNow = "16km/h" %}
+{% set weatherNowImage = "/images/partly-sunny.svg" %}
+{% set tempNow = "-1°C" %}
+{% set windStrengthNow = "16km/h" %}
 
-  {% include "weather-modal-component.njk" %}
+{% include "weather-modal-component.njk" %}
 
-  <div class="column is-12 has-text-centered has-text-white">
-    <p class="title is-4">The Week Ahead</p>
-    </div>
+<div class="column is-12 has-text-centered has-text-white">
+  <h2 class="title is-4">The Week Ahead</h2>
+</div>
 
-    {% include "city-card-component.njk" %}
+{% include "city-card-component.njk" %}
 
-  {% set dayOfWeek = "Monday" %}
-  {% set weatherImage = "/images/sun.svg" %}
-  {% set weatherDescription = "Abundant sunshine" %}
-  {% set weatherInfo = "Max Temp (°C): 12°C, Max Wind Strength (km/h): 13km/h" %}
+{% set dayOfWeek = "Monday" %}
+{% set weatherImage = "/images/sun.svg" %}
+{% set weatherDescription = "Abundant sunshine" %}
+{% set weatherInfo = "Max Temp (°C): 12°C, Max Wind Strength (km/h): 13km/h" %}
 
-  {% include "weekday-card-component.njk" %}
+{% include "weekday-card-component.njk" %}
 
-  {% set dayOfWeek = "Tuesday" %}
-  {% set weatherImage = "/images/partly-sunny.svg" %}
-  {% set weatherDescription = "Intervals of clouds and sunshine" %}
-  {% set weatherInfo = "Max Temp (°C): 14°C, Max Wind Strength (km/h): 7km/h" %}
+{% set dayOfWeek = "Tuesday" %}
+{% set weatherImage = "/images/partly-sunny.svg" %}
+{% set weatherDescription = "Intervals of clouds and sunshine" %}
+{% set weatherInfo = "Max Temp (°C): 14°C, Max Wind Strength (km/h): 7km/h" %}
 
-  {% include "weekday-card-component.njk" %}
+{% include "weekday-card-component.njk" %}
 
-  {% set dayOfWeek = "Wednesday" %}
-  {% set weatherImage = "/images/partly-sunny.svg" %}
-  {% set weatherDescription = "Sun and some clouds" %}
-  {% set weatherInfo = "Max Temp (°C): 12°C, Max Wind Strength (km/h): 15km/h" %}
+{% set dayOfWeek = "Wednesday" %}
+{% set weatherImage = "/images/partly-sunny.svg" %}
+{% set weatherDescription = "Sun and some clouds" %}
+{% set weatherInfo = "Max Temp (°C): 12°C, Max Wind Strength (km/h): 15km/h" %}
 
-  {% include "weekday-card-component.njk" %}
+{% include "weekday-card-component.njk" %}
 
-  {% set dayOfWeek = "Thursday" %}
-  {% set weatherImage = "/images/cloud.svg" %}
-  {% set weatherDescription = "Mainly cloudy and cooler" %}
-  {% set weatherInfo = "Max Temp (°C): 9°C, Max Wind Strength (km/h): 20km/h" %}
+{% set dayOfWeek = "Thursday" %}
+{% set weatherImage = "/images/cloud.svg" %}
+{% set weatherDescription = "Mainly cloudy and cooler" %}
+{% set weatherInfo = "Max Temp (°C): 9°C, Max Wind Strength (km/h): 20km/h" %}
 
-  {% include "weekday-card-component.njk" %}
+{% include "weekday-card-component.njk" %}
 
-  {% set dayOfWeek = "Friday" %}
-  {% set weatherImage = "/images/cloud.svg" %}
-  {% set weatherDescription = "Considerable cloudiness" %}
-  {% set weatherInfo = "Max Temp (°C): 9°C, Max Wind Strength (km/h): 11km/h" %}
+{% set dayOfWeek = "Friday" %}
+{% set weatherImage = "/images/cloud.svg" %}
+{% set weatherDescription = "Considerable cloudiness" %}
+{% set weatherInfo = "Max Temp (°C): 9°C, Max Wind Strength (km/h): 11km/h" %}
 
-  {% include "weekday-card-component.njk" %}
+{% include "weekday-card-component.njk" %}
 
-  {% set dayOfWeek = "Saturday" %}
-  {% set weatherImage = "/images/partly-sunny.svg" %}
-  {% set weatherDescription = "Partly sunny" %}
-  {% set weatherInfo = "Max Temp (°C): 8°C, Max Wind Strength (km/h): 4km/h" %}
+{% set dayOfWeek = "Saturday" %}
+{% set weatherImage = "/images/partly-sunny.svg" %}
+{% set weatherDescription = "Partly sunny" %}
+{% set weatherInfo = "Max Temp (°C): 8°C, Max Wind Strength (km/h): 4km/h" %}
 
-  {% include "weekday-card-component.njk" %}
+{% include "weekday-card-component.njk" %}
 
-  {% set dayOfWeek = "Sunday" %}
-  {% set weatherImage = "/images/cloud-sun-rain.svg" %}
-  {% set weatherDescription = "Sunny to partly cloudy with a shower in places in the afternoon" %}
-  {% set weatherInfo = "Max Temp (°C): 7°C, Max Wind Strength (km/h): 9km/h" %}
+{% set dayOfWeek = "Sunday" %}
+{% set weatherImage = "/images/cloud-sun-rain.svg" %}
+{% set weatherDescription = "Sunny to partly cloudy with a shower in places in the afternoon" %}
+{% set weatherInfo = "Max Temp (°C): 7°C, Max Wind Strength (km/h): 9km/h" %}
 
-  {% include "weekday-card-component.njk" %}
+{% include "weekday-card-component.njk" %}

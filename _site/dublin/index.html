@@ -107,6 +107,11 @@
             Home
           </a>
           
+          <a href="/about/"
+            class="navbar-item has-text-white">
+            About
+          </a>
+          
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link has-text-white">
               City
@@ -132,6 +137,11 @@
               </a>
             </div>
           </div>
+          
+          <a href="/health-activities/"
+            class="navbar-item has-text-white">
+            Health and Activities
+          </a>
           
           <a href="/settings/"
             class="navbar-item has-text-white">
@@ -187,7 +197,7 @@
     </div>
 </nav>
   <main class="columns is-multiline box has-background-success is-centered">
-    
+    <!-- https://bulma.io/documentation/components/breadcrumb/ -->
 <div class="column is-12 has-text-centered">
 <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
   <ul>
@@ -197,40 +207,11 @@
 </nav>
 </div>
 
-<div class="column is-12 has-text-centered">
+<div class="column is-12">
   <p class="title is-4">Today</p>
   <button class="js-modal-trigger button" data-target="weather-modal">
     Right Now
   </button>
-  <!-- https://bulma.io/documentation/components/card/ -->
-<div class="column is-2">
-  <section class="card has-text-centered">
-    <header class="card-header">
-      <p class="card-header-title is-size-4 is-centered">Dublin</p>
-    </header>
-    <div class="card-image">
-      <figure class="image">
-        <img src="/images/dublin.jpg" alt="City Image">
-      </figure>
-    </div>
-    <article class="card-content">
-      <p class="content is-size-4">
-        Low clouds
-      </p>
-      <p class="content is-size-4">
-        Max Temp: 8°C
-      </p>
-      <p class="content is-size-4">
-        Max Wind Strength: 15km/h
-      </p>
-    </article>
-    <footer class="card-footer">
-      <a href="/dublin" class="card-footer-item">View</a>
-      <a href="#" class="card-footer-item">Add to Favourites</a>
-      <a href="#" class="card-footer-item">Remove</a>
-    </footer>
-  </section>
-</div>
 </div>
 
   
@@ -260,13 +241,43 @@
   <p class="title is-4">The Week Ahead</p>
   </div>
 
+  <!-- https://bulma.io/documentation/components/card/ -->
+<div class="column is-2">
+  <section class="card has-text-centered">
+    <header class="card-header">
+      <p class="card-header-title is-size-4 is-centered">Dublin</p>
+    </header>
+    <div class="card-image">
+      <figure class="image">
+        <img src="/images/dublin.jpg" alt="City Image">
+      </figure>
+    </div>
+    <article class="card-content">
+      <p class="content is-size-4">
+        Low clouds
+      </p>
+      <p class="content is-size-4">
+        Max Temp: 8°C
+      </p>
+      <p class="content is-size-4">
+        Max Wind Strength: 15km/h
+      </p>
+    </article>
+    <footer class="card-footer">
+      <a href="/dublin" class="card-footer-item">View</a>
+      <a href="#" class="card-footer-item">Add to Favourites</a>
+      <a href="#" class="card-footer-item">Remove</a>
+    </footer>
+  </section>
+</div>
+
   
   
   
   
 
   <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column is-2">
+ <div class="column">
     <section class="card has-background-light has-text-dark">
       <header class="card-header">
         <p class="card-header-title is-size-4 has-text-dark">Monday</p>
@@ -293,7 +304,7 @@
   
 
   <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column is-2">
+ <div class="column">
     <section class="card has-background-light has-text-dark">
       <header class="card-header">
         <p class="card-header-title is-size-4 has-text-dark">Tuesday</p>
@@ -320,7 +331,7 @@
   
 
   <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column is-2">
+ <div class="column">
     <section class="card has-background-light has-text-dark">
       <header class="card-header">
         <p class="card-header-title is-size-4 has-text-dark">Wednesday</p>
@@ -347,7 +358,7 @@
   
 
   <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column is-2">
+ <div class="column">
     <section class="card has-background-light has-text-dark">
       <header class="card-header">
         <p class="card-header-title is-size-4 has-text-dark">Thursday</p>
@@ -374,7 +385,7 @@
   
 
   <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column is-2">
+ <div class="column">
     <section class="card has-background-light has-text-dark">
       <header class="card-header">
         <p class="card-header-title is-size-4 has-text-dark">Friday</p>
@@ -401,7 +412,7 @@
   
 
   <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column is-2">
+ <div class="column">
     <section class="card has-background-light has-text-dark">
       <header class="card-header">
         <p class="card-header-title is-size-4 has-text-dark">Saturday</p>
@@ -428,7 +439,7 @@
   
 
   <!-- https://bulma.io/documentation/components/card/ -->
- <div class="column is-2">
+ <div class="column">
     <section class="card has-background-light has-text-dark">
       <header class="card-header">
         <p class="card-header-title is-size-4 has-text-dark">Sunday</p>

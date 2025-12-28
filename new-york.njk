@@ -12,7 +12,7 @@ eleventyNavigation:
   parent: City
   order: 2
 ---
-
+<!-- https://bulma.io/documentation/components/breadcrumb/ -->
 <div class="column is-12 has-text-centered">
 <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
   <ul>
@@ -22,12 +22,11 @@ eleventyNavigation:
 </nav>
 </div>
 
-<div class="column is-12 has-text-centered is-centered">
+<div class="column is-12">
   <p class="title is-4">Today</p>
   <button class="js-modal-trigger button" data-target="weather-modal">
     Right Now
   </button>
-  {% include "city-card-component.njk" %}
 </div>
 
   {% set weatherNowImage = "/images/cloud.svg" %}
@@ -39,6 +38,8 @@ eleventyNavigation:
   <div class="column is-12 has-text-centered has-text-white">
     <p class="title is-4">The Week Ahead</p>
     </div>
+
+    {% include "city-card-component.njk" %}
 
   {% set dayOfWeek = "Monday" %}
   {% set weatherImage = "/images/cloud-sun-rain.svg" %}

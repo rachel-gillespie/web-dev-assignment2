@@ -1,9 +1,18 @@
 # Whether Weather
 
-### Project Description:
-An API that provides weather data for cities all over the world using the latest satellite technology.
+Whether Weather is a web application that provides weather data for cities all over the world using the latest satellite technology.
+
+## Project Overview:
+
+Whether Weather is a web application that displays the weather and forecast for the next 7 days for cities all over the world. It is created as part of a Computer Science web development module.
 
 ## Installation Instructions:
+
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v14.0.0 or higher)
+- npm (comes with Node.js)
+
+Download the source code from the [Final Version, Release v4.0](https://github.com/rachel-gillespie/web-dev-assignment2/releases/tag/v4.0)
 
 ### Install Eleventy
 
@@ -17,33 +26,27 @@ npm install -g @11ty/eleventy
 eleventy --serve
 ```
 
-Now navigate to [http://localhost:8080](http://localhost:8080) to see your site.
+Now navigate to [http://localhost:8080](http://localhost:8080) to see the site.
 
 Hot reloading is enabled, so any changes you make to your files will be reflected in the browser.
 
 ## Usage:
-This 
 
-## Technologies & Documentation
+This project shows an example of a weather web app that is developed using HTML, Bulma, Nunjucks and Eleventy.
 
-* [Eleventy](https://www.11ty.dev/)
-* [Bulma](https://bulma.io/)
+## Technologies used:
 
+- **[Eleventy](https://www.11ty.dev/)** - Static site generator
+- **[Bulma](https://bulma.io/)** - CSS framework for responsive design
+- **[Nunjucks](https://mozilla.github.io/nunjucks/)** - Templating engine
+- **JavaScript** - Client-side functionality
 
-Project Description: Clearly explain what the project does and its purpose. This gives readers an immediate understanding of what problem the project aims to solve. 
+## Contact Information: 
 
-Installation Instructions: Provide step-by-step instructions on how to install and set up the project, including any dependencies or prerequisites needed. 
+**Project Maintainer:** Rachel Gillespie  
+**GitHub:** [@rachel-gillespie](https://github.com/rachel-gillespie)  
+**Email:** gillespierachel74@outlook.com
 
-Usage: Explain how to use the project, including examples if applicable. This section should guide users on how to interact with the software or library effectively. 
+Feel free to reach out if you have questions about the project or encounter any issues!
 
-Configuration: If the project requires configuration settings or options, document them here. This helps users customize the project to their specific needs. 
-
-Examples: Include example code or use cases to demonstrate how the project can be used in real-world scenarios. This can help users understand the project's capabilities better. 
-
-Documentation: Provide links or references to more detailed documentation if available. This could include API references, user guides, or tutorials. 
-
-Contributing Guidelines: If you welcome contributions from others, outline how they can contribute to the project. This may include guidelines for reporting issues, submitting feature requests, or making code contributions. 
-
-Contact Information: Provide contact information for the project maintainer or team in case users have questions or need support. 
-
-Acknowledgements: Optionally, you can acknowledge contributors, libraries, or other projects that have been helpful in the development of your project.
+**Note:** This is an educational project created for academic purposes. The weather data and functionality are simulated for demonstration purposes.

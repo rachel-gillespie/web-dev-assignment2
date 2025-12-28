@@ -1,8 +1,9 @@
 # Whether Weather
-Project Description: Clearly explain what the project does and its purpose. This gives readers an immediate understanding of what problem the project aims to solve. 
+
+### Project Description:
 An API that provides weather data for cities all over the world using the latest satellite technology.
 
-## Getting Started
+## Installation Instructions:
 
 ### Install Eleventy
 
@@ -20,7 +21,10 @@ Now navigate to [http://localhost:8080](http://localhost:8080) to see your site.
 
 Hot reloading is enabled, so any changes you make to your files will be reflected in the browser.
 
-## Technologies
+## Usage:
+This 
+
+## Technologies & Documentation
 
 * [Eleventy](https://www.11ty.dev/)
 * [Bulma](https://bulma.io/)
@@ -39,8 +43,6 @@ Examples: Include example code or use cases to demonstrate how the project can b
 Documentation: Provide links or references to more detailed documentation if available. This could include API references, user guides, or tutorials. 
 
 Contributing Guidelines: If you welcome contributions from others, outline how they can contribute to the project. This may include guidelines for reporting issues, submitting feature requests, or making code contributions. 
-
-License: Clearly state the project's license to inform users of their rights and restrictions regarding the use and distribution of the project.  We won’t worry too much about this .
 
 Contact Information: Provide contact information for the project maintainer or team in case users have questions or need support. 
 

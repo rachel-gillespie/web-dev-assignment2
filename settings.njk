@@ -6,12 +6,11 @@ eleventyNavigation:
   order: 3
 ---
 
-<main class="columns is-multiline box has-background-info-20">
-  <div class="column is-12 has-text-centered">
-    <h1 class="title is-spaced">Settings</h1>
+<div class="column is-12 has-text-centered">
+    <p class="title is-spaced">Settings</p>
   </div>
-  <h2 class="subtitle">Favourite Cities</h2>
-  <section class="section box column is-12 has-text-centered">
+  <section class="section box has-background-light has-text-dark column is-4 m-2">
+    <p class="title is-5 has-text-dark">Favourite Cities</p>
     <div class="checkboxes">
       <label class="checkbox">
         <input type="checkbox" />
@@ -38,48 +37,46 @@ eleventyNavigation:
         New York
       </label>
     </div>
-  <div class="column is-12">
-    <label class="checkbox">
-      <input type="checkbox" checked />
-      Save my preferences
-    </label>
-  </div>
-</section>
-  <h2 class="subtitle">Settings</h2>
-  <section class="section box column is-12 has-text-centered">
-    <div class="checkboxes">
+    <div class="column is-12">
       <label class="checkbox">
-        <input type="checkbox" />
-        Celsius
-        <input type="checkbox" />
-        Fahrenheit
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        London
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        Paris
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        Rome
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        Tokyo
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        New York
+        <input type="checkbox" checked />
+        Save my preferences
       </label>
     </div>
-  <div class="column is-12">
-    <label class="checkbox">
-      <input type="checkbox" checked />
-      Save my preferences
-    </label>
-  </div>
-</section>
-</main>
+  </section>
+  <section class="section box has-background-light has-text-dark column is-4 m-2">
+    <p class="title is-5 has-text-dark">Preferences</p>
+    <div class="select m-2">
+      <select>
+        <option>Preferred Units</option>
+        <option>Celsius</option>
+        <option>Fahrenheit</option>
+      </select>
+    </div>
+    <div class="select m-2">
+      <select>
+        <option>Enable Precise Location Services</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div class="select m-2">
+      <select>
+        <option>Turn On Severe Weather Alerts</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div>
+      <input class="input m-2" type="text" placeholder="Home Address" />
+    </div>
+    <div>
+      <input class="input m-2" type="text" placeholder="Work Address" />
+    </div>
+    <div class="column is-12">
+      <label class="checkbox">
+        <input type="checkbox" checked />
+        Save my preferences
+      </label>
+    </div>
+  </section>

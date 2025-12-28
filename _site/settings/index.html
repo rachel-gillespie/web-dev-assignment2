@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="has-background-info-20" lang="en">
+<html class="has-background-success" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 
+  <script src="https://kit.fontawesome.com/bd3a3d372a.js" crossorigin="anonymous"></script>
   <script>
     //https://bulma.io/documentation/components/navbar/#navbar-menu
     document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +32,7 @@
       });
 
     });
-
+    // https://bulma.io/documentation/components/modal/
     document.addEventListener('DOMContentLoaded', () => {
       // Functions to open and close a modal
       function openModal($el) {
@@ -78,7 +79,8 @@
 </head>
 
 <body>
-  <section class="hero is-small">
+  <!-- https://bulma.io/documentation/layout/hero/ -->
+<section class="hero is-small">
   <div class="hero-body has-text-centered has-background-info">
     <img src="/images/logo.png" alt="logo">
     <p class="subtitle has-text-warning">
@@ -86,11 +88,9 @@
     </p>
   </div>
 </section>
-  <nav class="navbar has-background-black">
+  <!-- https://bulma.io/documentation/components/navbar/ -->
+<nav class="navbar has-background-info-80">
   <div class="navbar-brand">
-    <a class="navbar-item" href="#">
-      <img src="/images/logo.png" alt="Logo"/>
-    </a>
     <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -99,7 +99,7 @@
     </span>
   </div>
   <div id="navbarMenu" class="navbar-menu">
-    <div class="navbar-end has-background-black">
+    <div class="navbar-start has-background-info-80">
       
           
           <a href="/"
@@ -137,21 +137,62 @@
             class="navbar-item has-text-white is-active">
             Settings
           </a>
-          
-          <a href="/feature/"
-            class="navbar-item has-text-white">
-            Extra
-          </a>
     </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+          <button class="js-modal-trigger button is-link" data-target="user-modal">
+            <strong>Sign up</strong>
+          </button>
+          <button class="js-modal-trigger button is-light" data-target="user-modal">
+            Log in
+          </button>
+          <!-- https://bulma.io/documentation/components/modal/ -->
+<div id="user-modal" class="modal has-text-centered">
+    <div class="modal-background">
+    <div class="modal-content">
+      <div class="box">
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="Email">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input" type="password" placeholder="Password">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-success">
+              Login/Sign Up
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
   </div>
+        </div>
+      </div>
+    </div>
 </nav>
-  
-<main class="columns is-multiline box has-background-info-20">
-  <div class="column is-12 has-text-centered">
-    <h1 class="title is-spaced">Settings</h1>
+  <main class="columns is-multiline box has-background-success is-centered">
+    
+<div class="column is-12 has-text-centered">
+    <p class="title is-spaced">Settings</p>
   </div>
-  <h2 class="subtitle">Favourite Cities</h2>
-  <section class="section box column is-12 has-text-centered">
+  <section class="section box has-background-light has-text-dark column is-4 m-2">
+    <p class="title is-5 has-text-dark">Favourite Cities</p>
     <div class="checkboxes">
       <label class="checkbox">
         <input type="checkbox" />
@@ -178,60 +219,57 @@
         New York
       </label>
     </div>
-  <div class="column is-12">
-    <label class="checkbox">
-      <input type="checkbox" checked />
-      Save my preferences
-    </label>
-  </div>
-</section>
-  <h2 class="subtitle">Settings</h2>
-  <section class="section box column is-12 has-text-centered">
-    <div class="checkboxes">
+    <div class="column is-12">
       <label class="checkbox">
-        <input type="checkbox" />
-        Celsius
-        <input type="checkbox" />
-        Fahrenheit
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        London
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        Paris
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        Rome
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        Tokyo
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        New York
+        <input type="checkbox" checked />
+        Save my preferences
       </label>
     </div>
-  <div class="column is-12">
-    <label class="checkbox">
-      <input type="checkbox" checked />
-      Save my preferences
-    </label>
-  </div>
-</section>
-</main>
-  <footer class="footer has-background-black">
-  <div class="container">
-    <div class="content has-text-centered has-text-weight-bold has-text-white">
+  </section>
+  <section class="section box has-background-light has-text-dark column is-4 m-2">
+    <p class="title is-5 has-text-dark">Preferences</p>
+    <div class="select m-2">
+      <select>
+        <option>Preferred Units</option>
+        <option>Celsius</option>
+        <option>Fahrenheit</option>
+      </select>
+    </div>
+    <div class="select m-2">
+      <select>
+        <option>Enable Precise Location Services</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div class="select m-2">
+      <select>
+        <option>Turn On Severe Weather Alerts</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div>
+      <input class="input m-2" type="text" placeholder="Home Address" />
+    </div>
+    <div>
+      <input class="input m-2" type="text" placeholder="Work Address" />
+    </div>
+    <div class="column is-12">
+      <label class="checkbox">
+        <input type="checkbox" checked />
+        Save my preferences
+      </label>
+    </div>
+  </section>
+  </main>
+  <!-- https://bulma.io/documentation/layout/footer/ -->
+<footer class="footer has-background-info-50">
+    <div class="content has-text-centered has-text-weight-bold has-text-warning">
       <p>
         (Whether) Weather &trade;
       </p>
     </div>
-  </div>
 </footer>
 </body>
-
 </html>

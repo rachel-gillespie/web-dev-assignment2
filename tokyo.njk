@@ -3,8 +3,9 @@ layout: layout.njk
 title: Tokyo
 cityTitle: Tokyo
 cityImage: /images/tokyo.jpg
-cityDescription: Clear / Sunny
-cityWeather: Max Temp (°C) 18°C, Max Wind Strength (km/h) 28km/h
+cityDescription: Plenty of sunshine
+maxTemp: 11°C
+maxWindStrength: 11km/h
 cityPath: /tokyo
 eleventyNavigation:
   key: Tokyo
@@ -12,161 +13,78 @@ eleventyNavigation:
   order: 2
 ---
 
+<div class="column is-12 has-text-centered">
 <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
   <ul>
     <li><a href="/index">Home</a></li>
     <li class="is-active"><a href="#" aria-current="page">Tokyo</a></li>
   </ul>
 </nav>
+</div>
 
-<main class="columns is-multiline box has-background-info-20">
+<div class="column is-12 has-text-centered is-centered">
+  <p class="title is-4">Today</p>
+  <button class="js-modal-trigger button" data-target="weather-modal">
+    Right Now
+  </button>
+  {% include "city-card-component.njk" %}
+</div>
 
-  <div class="column">
+  {% set weatherNowImage = "/images/partly-sunny.svg" %}
+  {% set tempNow = "-1°C" %}
+  {% set windStrengthNow = "16km/h" %}
 
-    {% include "city-card-component.njk" %}
+  {% include "weather-modal-component.njk" %}
 
-    <section class="section">
-      <h2 class="title is-4">Right Now</h2>
-      <figure class="image is-128x128">
-        <img src="/images/rain.jpg" alt="Rain">
-      </figure>
-      <h3 class="title is-5">Max Temp (°C)</h3>
-      <p class="subtitle is-3">11°C </p>
-      <h3 class="title is-5">Max Wind Strength (km/h)</h3>
-      <p class="subtitle is-3">26km/h </p>
-    </section>
+  <div class="column is-12 has-text-centered has-text-white">
+    <p class="title is-4">The Week Ahead</p>
+    </div>
 
-  </div>
+  {% set dayOfWeek = "Monday" %}
+  {% set weatherImage = "/images/sun.svg" %}
+  {% set weatherDescription = "Abundant sunshine" %}
+  {% set weatherInfo = "Max Temp (°C): 12°C, Max Wind Strength (km/h): 13km/h" %}
 
-  <div class="columns is-4 is-centered is-multiline">
-    <section class="column is-2 card">
-      <header class="card-header">
-        <p class="card-header-title is-size-4">Monday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Cloudy
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 11°C <br> Max Wind Strength (km/h): 20km/h
-        </p>
-      </article>
-    </section>
-    <section class="column is-2 card">
-      <header class="card-header">
-        <p class="card-header-title is-size-4">Tuesday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Sunny
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 9°C <br> Max Wind Strength (km/h): 35km/h
-        </p>
-      </article>
-    </section>
-    <section class="column is-2 card">
-      <header class="card-header">
-        <p class="card-header-title is-size-4">Wednesday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/sunny-intervals.jpg" alt="Sunny Sky">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Cloudy/Rain
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 13°C <br> Max Wind Strength (km/h): 19km/h
-        </p>
-      </article>
-    </section>
-    <section class="column is-2 card">
-      <header class="card-header">
-        <p class="card-header-title is-size-4">Thursday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/sunny-intervals.jpg" alt="Sunny Sky">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Sunny Intervals
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 15°C <br> Max Wind Strength (km/h): 19km/h
-        </p>
-      </article>
-    </section>
-    <section class="column is-2 card">
-      <header class="card-header">
-        <p class="card-header-title is-size-4">Friday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Sunny (High Winds)
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 9°C <br> Max Wind Strength (km/h): 75km/h
-        </p>
-      </article>
-    </section>
-    <section class="column is-2 card">
-      <header class="card-header">
-        <p class="card-header-title is-size-4">Saturday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/sunny-intervals.jpg" alt="Sunny Sky">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Sunny Intervals
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 7°C <br> Max Wind Strength (km/h): 35km/h
-        </p>
-      </article>
-    </section>
-    <section class="column is-2 card">
-      <header class="card-header">
-        <p class="card-header-title is-size-4">Sunday</p>
-      </header>
-      <div class="card-image">
-        <figure class="image">
-          <img src="/images/cloudy.jpg" alt="Cloudy Sky">
-        </figure>
-      </div>
-      <article class="card-content">
-        <p class="content is-size-4">
-          Sunny
-        </p>
-        <p class="content is-size-4">
-          Max Temp (°C): 10°C <br> Max Wind Strength (km/h): 35km/h
-        </p>
-      </article>
-    </section>
+  {% include "weekday-card-component.njk" %}
 
+  {% set dayOfWeek = "Tuesday" %}
+  {% set weatherImage = "/images/partly-sunny.svg" %}
+  {% set weatherDescription = "Intervals of clouds and sunshine" %}
+  {% set weatherInfo = "Max Temp (°C): 14°C, Max Wind Strength (km/h): 7km/h" %}
 
-  </div>
+  {% include "weekday-card-component.njk" %}
 
-</main>
+  {% set dayOfWeek = "Wednesday" %}
+  {% set weatherImage = "/images/partly-sunny.svg" %}
+  {% set weatherDescription = "Sun and some clouds" %}
+  {% set weatherInfo = "Max Temp (°C): 12°C, Max Wind Strength (km/h): 15km/h" %}
+
+  {% include "weekday-card-component.njk" %}
+
+  {% set dayOfWeek = "Thursday" %}
+  {% set weatherImage = "/images/cloud.svg" %}
+  {% set weatherDescription = "Mainly cloudy and cooler" %}
+  {% set weatherInfo = "Max Temp (°C): 9°C, Max Wind Strength (km/h): 20km/h" %}
+
+  {% include "weekday-card-component.njk" %}
+
+  {% set dayOfWeek = "Friday" %}
+  {% set weatherImage = "/images/cloud.svg" %}
+  {% set weatherDescription = "Considerable cloudiness" %}
+  {% set weatherInfo = "Max Temp (°C): 9°C, Max Wind Strength (km/h): 11km/h" %}
+
+  {% include "weekday-card-component.njk" %}
+
+  {% set dayOfWeek = "Saturday" %}
+  {% set weatherImage = "/images/partly-sunny.svg" %}
+  {% set weatherDescription = "Partly sunny" %}
+  {% set weatherInfo = "Max Temp (°C): 8°C, Max Wind Strength (km/h): 4km/h" %}
+
+  {% include "weekday-card-component.njk" %}
+
+  {% set dayOfWeek = "Sunday" %}
+  {% set weatherImage = "/images/cloud-sun-rain.svg" %}
+  {% set weatherDescription = "Sunny to partly cloudy with a shower in places in the afternoon" %}
+  {% set weatherInfo = "Max Temp (°C): 7°C, Max Wind Strength (km/h): 9km/h" %}
+
+  {% include "weekday-card-component.njk" %}

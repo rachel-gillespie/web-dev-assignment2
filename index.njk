@@ -6,59 +6,61 @@ eleventyNavigation:
   order: 1
 ---
 
-<main class="columns is-multiline box has-background-info-20 is-centered">
-
   <div class="column is-12 has-text-centered has-text-white">
-    <h1 class="title is-2">Dashboard</h1>
-    <h2 class="subtitle">Today</h2>
+    <p class="title is-2">Dashboard</p>
+    <p class="subtitle is-4 has-text-white">Today</p>
   </div>
 
   {% set cityTitle = "Dublin" %}
   {% set cityImage = "/images/dublin.jpg" %}
-  {% set cityDescription = "Cloudy with Rain/Drizzle" %}
-  {% set cityWeather = "Max Temp (°C): 11°C, Max Wind Strength (km/h): 26km/h" %}
+  {% set cityDescription = "Low clouds" %}
+  {% set maxTemp = "8°C" %}
+  {% set maxWindStrength = "15km/h" %}
   {% set cityPath = "/dublin"%}
 
   {% include "city-card-component.njk" %}
 
   {% set cityTitle = "London" %}
   {% set cityImage = "/images/london.jpg" %}
-  {% set cityDescription = "Cloudy with Sunny Intervals" %}
-  {% set cityWeather = "Max Temp (°C): 13°C, Max Wind Strength (km/h): 21km/h" %}
+  {% set cityDescription = "Low clouds" %}
+  {% set maxTemp = "8°C" %}
+  {% set maxWindStrength = "15km/h" %}
   {% set cityPath = "/london"%}
 
   {% include "city-card-component.njk" %}
 
   {% set cityTitle = "Paris" %}
   {% set cityImage = "/images/paris.jpg" %}
-  {% set cityDescription = "Cloudy" %}
-  {% set cityWeather = "Max Temp (°C): 13°C, Max Wind Strength (km/h): 21km/h" %}
+  {% set cityDescription = "Partly sunny and chilly" %}
+  {% set maxTemp = "5°C" %}
+  {% set maxWindStrength = "13km/h" %}
   {% set cityPath = "/paris"%}
 
   {% include "city-card-component.njk" %}
 
   {% set cityTitle = "Rome" %}
   {% set cityImage = "/images/rome.jpg" %}
-  {% set cityDescription = "Cloudy with Sunny Intervals" %}
-  {% set cityWeather = "Max Temp (°C): 16°C, Max Wind Strength (km/h): 21km/h" %}
+  {% set cityDescription = "Plenty of sunshine" %}
+  {% set maxTemp = "12°C" %}
+  {% set maxWindStrength = "6km/h" %}
   {% set cityPath = "/rome"%}
 
   {% include "city-card-component.njk" %}
 
   {% set cityTitle = "Tokyo" %}
   {% set cityImage = "/images/tokyo.jpg" %}
-  {% set cityDescription = "Clear / Sunny" %}
-  {% set cityWeather = "Max Temp (°C): 18°C, Max Wind Strength (km/h): 28km/h" %}
+  {% set cityDescription = "Plenty of sunshine" %}
+  {% set maxTemp = "11°C" %}
+  {% set maxWindStrength = "11km/h" %}
   {% set cityPath = "/tokyo"%}
 
   {% include "city-card-component.njk" %}
 
   {% set cityTitle = "New York" %}
   {% set cityImage = "/images/new-york.jpg" %}
-  {% set cityDescription = "Sunny" %}
-  {% set cityWeather = "Max Temp (°C): 4°C, Max Wind Strength (km/h): 19km/h" %}
+  {% set cityDescription = "Cloudy most of the time with a little rain late in the afternoon" %}
+  {% set maxTemp = "2°C" %}
+  {% set maxWindStrength = "6km/h" %}
   {% set cityPath = "/new-york"%}
 
   {% include "city-card-component.njk" %}
-
-</main>

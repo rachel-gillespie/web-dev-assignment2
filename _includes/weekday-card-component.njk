@@ -1,0 +1,21 @@
+<!-- https://bulma.io/documentation/components/card/ -->
+ <div class="column is-2">
+    <section class="card has-background-light has-text-dark">
+      <header class="card-header">
+        <p class="card-header-title is-size-4 has-text-dark">{{dayOfWeek}}</p>
+      </header>
+      <div class="card-image">
+        <figure class="image">
+          <img src="{{weatherImage}}" alt="Weather Image">
+        </figure>
+      </div>
+      <article class="card-content">
+        <p class="content is-size-4">
+          {{weatherDescription}}
+        </p>
+        <p class="content is-size-4">
+          {{weatherInfo}}
+        </p>
+      </article>
+    </section>
+  </div>

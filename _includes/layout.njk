@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="has-background-info-20" lang="en">
+<html class="has-background-success" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 
+  <script src="https://kit.fontawesome.com/bd3a3d372a.js" crossorigin="anonymous"></script>
   <script>
     //https://bulma.io/documentation/components/navbar/#navbar-menu
     document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +32,7 @@
       });
 
     });
-
+    // https://bulma.io/documentation/components/modal/
     document.addEventListener('DOMContentLoaded', () => {
       // Functions to open and close a modal
       function openModal($el) {
@@ -80,8 +81,9 @@
 <body>
   {% include "header.njk" %}
   {% include "nav.njk" %}
-  {{ content | safe }}
+  <main class="columns is-multiline box has-background-success is-centered">
+    {{ content | safe }}
+  </main>
   {% include "footer.njk" %}
 </body>
-
 </html>

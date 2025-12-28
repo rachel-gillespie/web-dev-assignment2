@@ -1,5 +1,5 @@
 # Whether Weather
-
+Project Description: Clearly explain what the project does and its purpose. This gives readers an immediate understanding of what problem the project aims to solve. 
 An API that provides weather data for cities all over the world using the latest satellite technology.
 
 ## Getting Started
